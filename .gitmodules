@@ -1,3 +1,6 @@
 [submodule "pal_gripper"]
 	path = pal_gripper
 	url = https://github.com/pal-robotics/pal_gripper.git
+[submodule "Manifold"]
+	path = Manifold
+	url = https://github.com/hjwdzh/Manifold.git
