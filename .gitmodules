@@ -1,9 +1,3 @@
-[submodule "ManifoldPlus"]
-	path = ManifoldPlus
-	url = https://github.com/hjwdzh/ManifoldPlus.git
-[submodule "pal_gripper"]
-	path = pal_gripper
-	url = https://github.com/pal-robotics/pal_gripper.git
 [submodule "workspace/ManifoldPlus"]
 	path = workspace/ManifoldPlus
 	url = https://github.com/hjwdzh/ManifoldPlus.git
