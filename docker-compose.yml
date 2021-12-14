@@ -1,0 +1,28 @@
+version: '3.5'
+services:
+  workspace:
+    build:
+        context: ./
+        args:
+          - 'HOME=/workspace'
+    volumes:
+      # - '${HOME}/.ssh:${HOME}/.ssh:rw'
+      # - '/tmp/.X11-unix:/tmp/.X11-unix:rw'
+      # - '/etc/localtime:/etc/localtime:ro'
+      # - '~/.Xauthority:/.Xauthority'
+      - '~/contact-graspnet-DataGen:/contact-graspnet-DataGen'
+    environment:
+      - DISPLAY=$IP:0
+      - HOME=/home
+      - XAUTHORITY=/.Xauthority
+      - XDG_RUNTIME_DIR=/tmp/xdgr
+      # - DISPLAY=host.docker.internal:0
+      - QT_X11_NO_MITSHM=1
+    tty: true
+    # entrypoint: "/bin/bash"
+    # runtime: nvidia
+    working_dir: '${HOME}'
+    # working_dir: '/home'
+    user: 'root'
+    privileged: true
+    network_mode: "host"
