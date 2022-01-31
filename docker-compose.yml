@@ -6,23 +6,30 @@ services:
         args:
           - 'HOME=/workspace'
     volumes:
-      # - '${HOME}/.ssh:${HOME}/.ssh:rw'
-      # - '/tmp/.X11-unix:/tmp/.X11-unix:rw'
-      # - '/etc/localtime:/etc/localtime:ro'
-      # - '~/.Xauthority:/.Xauthority'
-      - '~/contact-graspnet-DataGen:/contact-graspnet-DataGen'
+      - './workspace:/workspace:rw'
+      - '${HOME}/.ssh:${HOME}/.ssh:rw'
+      - '/tmp/.X11-unix:/tmp/.X11-unix:rw'
+      - '/etc/localtime:/etc/localtime:ro'
+      - '/etc/passwd:/etc/passwd:ro'
+      - '/etc/group:/etc/group:ro'
+      - '/etc/shadow:/etc/shadow:ro'
+      - '${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native'
+      # - '~/contact-graspnet-DataGen:/contact-graspnet-DataGen'
     environment:
-      - DISPLAY=$IP:0
-      - HOME=/home
-      - XAUTHORITY=/.Xauthority
-      - XDG_RUNTIME_DIR=/tmp/xdgr
-      # - DISPLAY=host.docker.internal:0
+      - DISPLAY
       - QT_X11_NO_MITSHM=1
+      # - TIAGO_USER=${TIAGO_USER}
+      # - TIAGO_UID=${TIAGO_UID}
+      # - TIAGO_GID=${TIAGO_GID}
+      - PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native
+    devices:
+      - '/dev/snd'
+    group_add:
+      - 'audio'
     tty: true
-    # entrypoint: "/bin/bash"
-    # runtime: nvidia
+    # entrypoint: "/entrypoint.sh"
+    runtime: nvidia
     working_dir: '${HOME}'
-    # working_dir: '/home'
-    user: 'root'
+    user: 1000:1000
     privileged: true
     network_mode: "host"
