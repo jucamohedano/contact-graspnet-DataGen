@@ -1,5 +1,11 @@
-[submodule "pal_gripper"]
-	path = pal_gripper
+[submodule "workspace/ManifoldPlus"]
+	path = workspace/ManifoldPlus
+	url = https://github.com/hjwdzh/ManifoldPlus.git
+[submodule "workspace/Manifold"]
+	path = workspace/Manifold
+	url = https://github.com/hjwdzh/Manifold.git
+[submodule "workspace/pal_gripper"]
+	path = workspace/pal_gripper
 	url = https://github.com/pal-robotics/pal_gripper.git
 [submodule "Manifold"]
 	path = Manifold
