@@ -1,0 +1,1 @@
+python /workspace/contact_graspnet/tools/create_table_top_scenes.py /workspace/acronym/ --gripper_path /workspace/contact_graspnet/gripper_models/tiago_gripper/transformed180_simplify_tiago_gripper.obj
