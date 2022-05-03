@@ -1,0 +1,24 @@
+version: '3.5'
+services:
+  workspace:
+    build:
+        context: ./workspace
+    volumes:
+      - './data_home:${HOME}:rw'
+      - '${HOME}/.ssh:${HOME}/.ssh:rw'
+      - '/tmp/.X11-unix:/tmp/.X11-unix:rw'
+      - '/etc/localtime:/etc/localtime:ro'
+      - '/etc/passwd:/etc/passwd:ro'
+      - '/etc/group:/etc/group:ro'
+      - '/etc/shadow:/etc/shadow:ro'
+    environment:
+      - DISPLAY
+      - QT_X11_NO_MITSHM=1
+    devices:
+      - '/dev/snd'
+    tty: true
+    entrypoint: "/entrypoint.sh"
+    runtime: nvidia
+    privileged: true
+    network_mode: "host"
+    working_dir: '${HOME}'
