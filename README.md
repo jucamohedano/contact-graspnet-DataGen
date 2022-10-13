@@ -10,8 +10,6 @@ This docker container gathers all the dependencies to generate the data to train
 [Link](https://leeds365-my.sharepoint.com/:f:/r/personal/sc19jcm_leeds_ac_uk/Documents/FYP/dataset?csf=1&web=1&e=lDqskN) to watertight manifold meshes
 
 
-## Example of one of the scenes generated for training
+## Example of two of the scenes generated for training
 
-
-
-<img src = "https://github.com/jucamohedano/contact-graspnet-DataGen/blob/master/docs/example.png?raw=True" width ="500" /> <img src = "https://github.com/jucamohedano/contact-graspnet-DataGen/blob/master/docs/example2.png?raw=True" width ="500" />
+<img src = "https://github.com/jucamohedano/contact-graspnet-DataGen/blob/master/docs/example.png?raw=True" width ="405" /> <img src = "https://github.com/jucamohedano/contact-graspnet-DataGen/blob/master/docs/example2.png?raw=True" width ="405" />
