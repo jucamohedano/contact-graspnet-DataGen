@@ -12,6 +12,6 @@ This docker container gathers all the dependencies to generate the data to train
 
 ## Example of one of the scenes generated for training
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/jucamohedano/contact-graspnet-DataGen/master/docs/example.png" width="500" height="600" class="center">
-</p>
+
+
+<img src = "https://github.com/jucamohedano/contact-graspnet-DataGen/blob/master/docs/example.png?raw=True" width ="500" /> <img src = "https://github.com/jucamohedano/contact-graspnet-DataGen/blob/master/docs/example2.png?raw=True" width ="500" />
